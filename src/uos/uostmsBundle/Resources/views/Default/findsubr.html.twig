@@ -1,0 +1,59 @@
+{% extends '::base.html.twig' %}
+
+{%block container %}
+<div class="span6">
+{% if error is defined%}
+              <br>
+              <font color="red">
+              {{error}}
+              </font>
+              </br>
+
+    {%endif%}
+              
+
+    <form  method ="POST" action="{{path('uosuostms_fs')}}">
+        
+   {% if error is not defined%}     
+        
+        <label for="year">Year&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{year}}</label>        
+        
+         <label for="timeslot">TimeSlot&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;  {{timeslot}}</label>      
+        
+        <label for="timeslot">Date&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{date}}</label>
+        
+        <label for="hall">Hall&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{hall}}</label>
+        
+        <label for="module">Module&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{module}}</label>
+        
+        <label for="lecturer">Lecturer &nbsp;:   &nbsp;&nbsp; {{lecturer}}</label>
+        
+   {%endif%}     
+              
+              <button type="submit" class="btn">OK</button>
+            </form>    
+        
+        {%endblock%}
+
+{%block sideMenu %}
+
+              <ul class="nav nav-list">
+              <li  class="nav-header" ><b>Home</b></li>
+              
+              {% if job== 'student' %}    
+              
+              <li class="nav-header">Student</li>
+              <li class="active" ><a   href="{{ path('uosuostms_fs')}}">Search Timetable </a></li>
+              <li ><a href="{{ path('uosuostms_falll')}}">Find Free Halls</a></li>
+              
+              {% endif %}
+              
+              {% if job== 'lecturer' %}   
+              
+              <li class="nav-header">Lecturer</li>
+              <li ><a  href="{{ path('uosuostms_fttl')}}">Search Timetable </a></li>
+              <li ><a href="{{ path('uosuostms_ff')}}">Find All</a></li>    
+              {% endif %}
+              </ul>   
+              
+{%endblock%}

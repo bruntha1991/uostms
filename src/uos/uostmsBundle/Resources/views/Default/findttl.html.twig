@@ -1,0 +1,54 @@
+{% extends '::base.html.twig' %}
+
+{%block container %}
+<div class="span6">
+    <form  method ="POST" action="{{path('uosuostms_fttlr')}}">
+        
+        
+        
+        <label for="timeslot">Select TimeSlot</label>
+        
+        <select name="timeslot">
+        <option value="1">8am - 9am</option>
+        <option value="2">9am - 10am</option>
+        <option value="3">10am - 11am</option>
+        <option value="4">11am - 12pm</option>
+        <option value="5">12pm - 1pm</option>
+        <option value="6">1pm - 2pm</option>
+        <option value="7">2pm - 3pm</option>
+        <option value="8">3pm - 4pm</option>
+        <option value="9">4pm - 5pm</option>
+        </select>
+        <br>
+        
+        <label for="timeslot">Select Date</label>
+        <input type="date" name="date">
+        <br>
+              
+              <button type="submit" class="btn">Search</button>
+            </form>    
+        
+        {%endblock%}
+
+{%block sideMenu %}
+
+              <ul class="nav nav-list">
+              <li  class="nav-header" ><b>Home</b></li>
+              
+              {% if job== 'student' %}    
+              
+              <li class="nav-header">Student</li>
+              <li ><a  href="{{ path('uosuostms_fs')}}">Search Timetable </a></li>
+              <li ><a href="{{ path('uosuostms_falll')}}">Find Free Halls</a></li>
+              
+              {% endif %}
+              
+              {% if job== 'lecturer' %}   
+              
+              <li class="nav-header">Lecturer</li>
+              <li class="active"><a  href="{{ path('uosuostms_fttl')}}">Search Timetable </a></li>
+              <li ><a href="{{ path('uosuostms_ff')}}">Find All</a></li>    
+              {% endif %}
+              </ul>   
+              
+{%endblock%}

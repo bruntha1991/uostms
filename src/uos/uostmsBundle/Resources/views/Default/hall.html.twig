@@ -1,0 +1,44 @@
+{% extends '::base.html.twig' %}
+
+{%block container %}
+<div class="span6">
+
+              
+   {% set asset_base = '@uosuostmsBundle/Resources/public/img/slide-02.jpg' %}
+        
+        {% image '@uosuostmsBundle/Resources/public/img/slide-02.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src='//files/images/slide-01.jpg'/>
+{% endimage %}
+        
+    
+    
+        <form  method ="POST" action="{{path('uosuostms_falll')}}">
+                    
+              <button type="submit" class="btn">OK</button>
+            </form>
+        
+        {%endblock%}
+
+{%block sideMenu %}
+
+              <ul class="nav nav-list">
+              <li  class="nav-header" ><b>Home</b></li>
+              
+              {% if job== 'student' %}    
+              
+              <li class="nav-header">Student</li>
+              <li ><a  href="{{ path('uosuostms_fs')}}">Search Timetable </a></li>
+              <li class="active" ><a href="{{ path('uosuostms_falll')}}">Find Free Halls</a></li>
+              
+              {% endif %}
+              
+              {% if job== 'lecturer' %}   
+              
+              <li class="nav-header">Lecturer</li>
+              <li ><a  href="{{ path('uosuostms_fttl')}}">Search Timetable </a></li>
+              <li ><a href="{{ path('uosuostms_ff')}}">Find All</a></li>    
+              {% endif %}
+              </ul>   
+              
+{%endblock%}{# empty Twig template #}

@@ -1,0 +1,33 @@
+{% extends '::base.html.twig' %}
+
+{%block container %}
+<div class="span8">
+    {% image '@uosuostmsBundle/Resources/public/img/home.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}    
+        
+        {%endblock%}
+
+{%block sideMenu %}
+
+              <ul class="nav nav-list">
+              <li class="active" class="nav-header" ><b>Home</b></li>
+              
+              {% if job== 'student' %}    
+              
+              <li class="nav-header">Student</li>
+              <li ><a  href="{{ path('uosuostms_fs')}}">Search Timetable </a></li>
+              <li ><a href="{{ path('uosuostms_falll')}}">Find Free Halls</a></li>
+              
+              {% endif %}
+              
+              {% if job== 'lecturer' %}   
+              
+              <li class="nav-header">Lecturer</li>
+              <li ><a  href="{{ path('uosuostms_fttl')}}">Search Timetable </a></li>
+              <li ><a href="{{ path('uosuostms_ff')}}">Find All</a></li>    
+              {% endif %}
+              </ul>   
+              
+{%endblock%}

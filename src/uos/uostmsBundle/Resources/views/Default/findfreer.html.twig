@@ -1,0 +1,69 @@
+{% extends '::base.html.twig' %}
+
+{%block container %}
+<div class="span6">
+{% if error is defined%}
+              <br>
+              <font color="red">
+              {{error}}
+              </font>
+              </br>
+
+    {%endif%}
+              
+              {% if error is not defined%}
+              
+
+    
+    <table class="table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Module</th>
+                        
+                        <th>Hall</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+        {% for entity in entities %}
+                        <tr>
+                            
+                            <td>{{ entity.year }}</td>
+                            <td>{{ entity.module }}</td>
+                            
+                            <td>{{ entity.name }}</td>
+                        </tr>
+        {% endfor %}
+                    </tbody>
+                </table>  
+{%endif%}
+        <form  method ="POST" action="{{path('uosuostms_ff')}}">
+                    
+              <button type="submit" class="btn">OK</button>
+            </form>
+        
+        {%endblock%}
+
+{%block sideMenu %}
+
+              <ul class="nav nav-list">
+              <li  class="nav-header" ><b>Home</b></li>
+              
+              {% if job== 'student' %}    
+              
+              <li class="nav-header">Student</li>
+              <li ><a  href="{{ path('uosuostms_fs')}}">Search Timetable </a></li>
+              <li  ><a href="{{ path('uosuostms_falll')}}">Find Free Halls</a></li>
+              
+              {% endif %}
+              
+              {% if job== 'lecturer' %}   
+              
+              <li class="nav-header">Lecturer</li>
+              <li ><a  href="{{ path('uosuostms_fttl')}}">Search Timetable </a></li>
+              <li class="active" ><a href="{{ path('uosuostms_ff')}}">Find All</a></li>    
+              {% endif %}
+              </ul>   
+              
+{%endblock%}

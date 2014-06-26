@@ -1,0 +1,4 @@
+uosuostms:
+    resource: "@uosuostmsBundle/Resources/config/routing.yml"
+    prefix:   /
+

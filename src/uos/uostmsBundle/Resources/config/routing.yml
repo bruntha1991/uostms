@@ -1,0 +1,43 @@
+uosuostms_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: uosuostmsBundle:Default:index }
+
+uosuostms_uos:
+    pattern:  /uos
+    defaults: { _controller: uosuostmsBundle:Default:uos }
+    
+uosuostms_fs:
+    pattern:  /fs
+    defaults: { _controller: uosuostmsBundle:Default:fs }
+    
+uosuostms_fsr:
+    pattern:  /fsr
+    defaults: { _controller: uosuostmsBundle:Default:fsr }
+    
+uosuostms_ff:
+    pattern:  /ff
+    defaults: { _controller: uosuostmsBundle:Default:ff }
+    
+uosuostms_ffr:
+    pattern:  /ffr
+    defaults: { _controller: uosuostmsBundle:Default:ffr }
+    
+uosuostms_fttl:
+    pattern:  /fttl
+    defaults: { _controller: uosuostmsBundle:Default:fttl }
+    
+uosuostms_fttlr:
+    pattern:  /fttlr
+    defaults: { _controller: uosuostmsBundle:Default:fttlr }
+    
+uosuostms_falll:
+    pattern:  /falll
+    defaults: { _controller: uosuostmsBundle:Default:falll }
+    
+uosuostms_falllr:
+    pattern:  /falllr
+    defaults: { _controller: uosuostmsBundle:Default:falllr }
+    
+uosuostms_hall:
+    pattern:  /hall
+    defaults: { _controller: uosuostmsBundle:Default:hall }
