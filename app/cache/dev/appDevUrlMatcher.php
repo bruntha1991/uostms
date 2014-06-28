@@ -28,6 +28,66 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         $request = $this->request;
 
         if (0 === strpos($pathinfo, '/images/example')) {
+            // _assetic_5a99088
+            if ($pathinfo === '/images/example.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '5a99088',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_5a99088',);
+            }
+
+            // _assetic_5a99088_0
+            if ($pathinfo === '/images/example_DSC00109_1.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '5a99088',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_5a99088_0',);
+            }
+
+            // _assetic_603698a
+            if ($pathinfo === '/images/example.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '603698a',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_603698a',);
+            }
+
+            // _assetic_603698a_0
+            if ($pathinfo === '/images/example_DSC00111_1.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '603698a',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_603698a_0',);
+            }
+
+            // _assetic_5316921
+            if ($pathinfo === '/images/example.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 5316921,  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_5316921',);
+            }
+
+            // _assetic_5316921_0
+            if ($pathinfo === '/images/example_DSC00112_1.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 5316921,  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_5316921_0',);
+            }
+
+            // _assetic_bd3b794
+            if ($pathinfo === '/images/example.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bd3b794',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_bd3b794',);
+            }
+
+            // _assetic_bd3b794_0
+            if ($pathinfo === '/images/example_DSC00113_1.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'bd3b794',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_bd3b794_0',);
+            }
+
+            // _assetic_c7bc212
+            if ($pathinfo === '/images/example.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'c7bc212',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_c7bc212',);
+            }
+
+            // _assetic_c7bc212_0
+            if ($pathinfo === '/images/example_DSC00114_1.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'c7bc212',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_c7bc212_0',);
+            }
+
+            // _assetic_5627966
+            if ($pathinfo === '/images/example.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 5627966,  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_5627966',);
+            }
+
+            // _assetic_5627966_0
+            if ($pathinfo === '/images/example_DSC00115_1.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 5627966,  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_5627966_0',);
+            }
+
             // _assetic_f7f8055
             if ($pathinfo === '/images/example.jpg') {
                 return array (  '_controller' => 'assetic.controller:render',  'name' => 'f7f8055',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_f7f8055',);

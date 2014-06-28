@@ -246,45 +246,63 @@ class DefaultController extends Controller
     public function hallAction(Request $request)
     {
         $hall=$request->get('hall');
+        $session  = $this->get("session");
         
         if($hall==='jg')
         {
-            return $this->render('uosuostmsBundle:Default:hall.html.twig',array('name' => $session->get('name'),
+            return $this->render('uosuostmsBundle:Default:fg3.html.twig',array('name' => $session->get('name'),
             'job'=>$session->get('job')));
         }
-        else
+        else if($hall ==='ff')
         {
-            $em = $this->getDoctrine()->getManager();
- //       $timetable = new Timetable();
-       
-        
-        $stmt = $em->getConnection()->prepare('select image1 from hall_image  where hall = :hall )');
-                
-             
-  //              $stmt->bindValue(':hall', $hall);                             
-    //            $stmt->execute();
-      //          $hall_image = $stmt->fetchAll();
-        //        header("Content-type: image/jpeg");
-                
-                
-                
-                
-        $repository = $em->getRepository('uosuostmsBundle:HallImage');
-        
-        $image = $repository->findOneBy(array('hall' => $hall));
-        
-        $hall_image=$image->getImage1();
-        
-         
-
-        $session  = $this->get("session");
-        return $this->render('uosuostmsBundle:Default:hall.html.twig',array('name' => $session->get('name'),
-            'job'=>$session->get('job'),'hall_image'=>"/slide-01.jpg"));
+            return $this->render('uosuostmsBundle:Default:fg1.html.twig',array('name' => $session->get('name'),
+            'job'=>$session->get('job')));
         }
-        
-        
-        
-        
-    }
+        else if($hall ==='ff')
+        {
+            return $this->render('uosuostmsBundle:Default:fg2.html.twig',array('name' => $session->get('name'),
+            'job'=>$session->get('job')));
+        }
+        else if($hall ==='ff')
+        {
+            return $this->render('uosuostmsBundle:Default:fg4.html.twig',array('name' => $session->get('name'),
+            'job'=>$session->get('job')));
+        }
+        else if($hall ==='ff')
+        {
+            return $this->render('uosuostmsBundle:Default:cl.html.twig',array('name' => $session->get('name'),
+            'job'=>$session->get('job')));
+        }
+        else if($hall ==='ff')
+        {
+            return $this->render('uosuostmsBundle:Default:gisl.html.twig',array('name' => $session->get('name'),
+            'job'=>$session->get('job')));
+        }
+        else if($hall ==='ff')
+        {
+            return $this->render('uosuostmsBundle:Default:gl.html.twig',array('name' => $session->get('name'),
+            'job'=>$session->get('job')));
+        }
+        else if($hall ==='ff')
+        {
+            return $this->render('uosuostmsBundle:Default:photol.html.twig',array('name' => $session->get('name'),
+            'job'=>$session->get('job')));
+        }
+        else if($hall ==='ff')
+        {
+            return $this->render('uosuostmsBundle:Default:pl.html.twig',array('name' => $session->get('name'),
+            'job'=>$session->get('job')));
+        }
+        else if($hall ==='ff')
+        {
+            return $this->render('uosuostmsBundle:Default:rh.html.twig',array('name' => $session->get('name'),
+            'job'=>$session->get('job')));
+        }
+        else if($hall ==='ff')
+        {
+            return $this->render('uosuostmsBundle:Default:rsl.html.twig',array('name' => $session->get('name'),
+            'job'=>$session->get('job')));
+        }
+     }
     
 }
