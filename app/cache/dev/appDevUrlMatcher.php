@@ -88,16 +88,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'assetic.controller:render',  'name' => 5627966,  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_5627966_0',);
             }
 
-            // _assetic_f7f8055
-            if ($pathinfo === '/images/example.jpg') {
-                return array (  '_controller' => 'assetic.controller:render',  'name' => 'f7f8055',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_f7f8055',);
-            }
-
-            // _assetic_f7f8055_0
-            if ($pathinfo === '/images/example_slide-02_1.jpg') {
-                return array (  '_controller' => 'assetic.controller:render',  'name' => 'f7f8055',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_f7f8055_0',);
-            }
-
             // _assetic_b6e53c9
             if ($pathinfo === '/images/example.jpg') {
                 return array (  '_controller' => 'assetic.controller:render',  'name' => 'b6e53c9',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_b6e53c9',);
@@ -106,6 +96,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // _assetic_b6e53c9_0
             if ($pathinfo === '/images/example_home_1.jpg') {
                 return array (  '_controller' => 'assetic.controller:render',  'name' => 'b6e53c9',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_b6e53c9_0',);
+            }
+
+            // _assetic_f7f8055
+            if ($pathinfo === '/images/example.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'f7f8055',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_f7f8055',);
+            }
+
+            // _assetic_f7f8055_0
+            if ($pathinfo === '/images/example_slide-02_1.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'f7f8055',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_f7f8055_0',);
             }
 
             // _assetic_7051c8f
