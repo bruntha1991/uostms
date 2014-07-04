@@ -3,8 +3,26 @@
 {%block container %}
 <div class="span6">
 
-              
-   
+  {% image '@uosuostmsBundle/Resources/public/img/2nd floor/Photogrammetry lab/photoes/DSC00058.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
+    {% image '@uosuostmsBundle/Resources/public/img/2nd floor/Photogrammetry lab/photoes/DSC00074.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
+    {% image '@uosuostmsBundle/Resources/public/img/2nd floor/Photogrammetry lab/photoes/DSC00076.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
+    {% image '@uosuostmsBundle/Resources/public/img/2nd floor/Photogrammetry lab/photoes/DSC00077.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
     
     
         <form  method ="POST" action="{{path('uosuostms_falll')}}">
@@ -35,4 +53,4 @@
               {% endif %}
               </ul>   
               
-{%endblock%}{# empty Twig template #}
+{%endblock%}

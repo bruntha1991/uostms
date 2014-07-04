@@ -3,8 +3,36 @@
 {%block container %}
 <div class="span6">
 
-              
-   
+  {% image '@uosuostmsBundle/Resources/public/img/2nd floor/GIS lab/photoes/DSC00057.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
+    {% image '@uosuostmsBundle/Resources/public/img/2nd floor/GIS lab/photoes/DSC00060.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
+    {% image '@uosuostmsBundle/Resources/public/img/2nd floor/GIS lab/photoes/DSC00061.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
+    {% image '@uosuostmsBundle/Resources/public/img/2nd floor/GIS lab/photoes/DSC00063.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
+    {% image '@uosuostmsBundle/Resources/public/img/2nd floor/GIS lab/photoes/DSC00064.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
+    
+    
+    
+    
+    
     
     
         <form  method ="POST" action="{{path('uosuostms_falll')}}">
@@ -35,4 +63,4 @@
               {% endif %}
               </ul>   
               
-{%endblock%}{# empty Twig template #}
+{%endblock%}

@@ -3,8 +3,31 @@
 {%block container %}
 <div class="span6">
 
-              
-   
+  {% image '@uosuostmsBundle/Resources/public/img/2nd floor/remote sensing lab/photoes/DSC00048.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
+    {% image '@uosuostmsBundle/Resources/public/img/2nd floor/remote sensing lab/photoes/DSC00051.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
+    {% image '@uosuostmsBundle/Resources/public/img/2nd floor/remote sensing lab/photoes/DSC00052.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
+    {% image '@uosuostmsBundle/Resources/public/img/2nd floor/remote sensing lab/photoes/DSC00056.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
+    {% image '@uosuostmsBundle/Resources/public/img/2nd floor/remote sensing lab/photoes/DSC00063.jpg'
+    filter='jpegoptim' output='/images/example.jpg' %}
+    <img src="{{ asset_url }}" alt="Example"/>
+{% endimage %}
+    
     
     
         <form  method ="POST" action="{{path('uosuostms_falll')}}">
@@ -35,4 +58,4 @@
               {% endif %}
               </ul>   
               
-{%endblock%}{# empty Twig template #}
+{%endblock%}
