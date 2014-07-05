@@ -97,7 +97,7 @@ class __TwigTemplate_8b95e1472856a5f61d5d793ae6cd9c2056363552e0ab96e389566e67bd1
             <span class=\"icon-bar\"></span>
             <span class=\"icon-bar\"></span>
           </button>
-          <a class=\"brand\" href=\"#\">Timetable Management System for University of sabaragamuwa</a>
+          <a class=\"brand\" href=\"#\">Resources Management System for Faculty of Geomatics</a>
           <div class=\"nav-collapse collapse\">
               
               
@@ -109,7 +109,8 @@ class __TwigTemplate_8b95e1472856a5f61d5d793ae6cd9c2056363552e0ab96e389566e67bd1
     <p class=\"navbar-text pull-right\">
               Logged in as <a class=\"navbar-link\">";
             // line 62
-            echo twig_escape_filter($this->env, $this->getContext($context, "name"), "html", null, true);
+            if (isset($context["name"])) { $_name_ = $context["name"]; } else { $_name_ = null; }
+            echo twig_escape_filter($this->env, $_name_, "html", null, true);
             echo "</a>
               <a href=\"";
             // line 63
@@ -302,6 +303,6 @@ class __TwigTemplate_8b95e1472856a5f61d5d793ae6cd9c2056363552e0ab96e389566e67bd1
 
     public function getDebugInfo()
     {
-        return array (  289 => 142,  284 => 141,  279 => 134,  273 => 133,  268 => 93,  263 => 87,  255 => 143,  252 => 142,  250 => 141,  240 => 135,  238 => 134,  234 => 133,  220 => 122,  216 => 121,  212 => 120,  208 => 119,  204 => 118,  200 => 117,  196 => 116,  192 => 115,  188 => 114,  184 => 113,  180 => 112,  176 => 111,  172 => 110,  155 => 95,  153 => 93,  147 => 89,  145 => 87,  126 => 70,  116 => 63,  112 => 62,  108 => 60,  106 => 59,  86 => 42,  82 => 41,  78 => 40,  74 => 39,  70 => 38,  59 => 30,  37 => 11,  25 => 1,);
+        return array (  290 => 142,  285 => 141,  280 => 134,  274 => 133,  269 => 93,  264 => 87,  256 => 143,  253 => 142,  251 => 141,  241 => 135,  239 => 134,  235 => 133,  221 => 122,  217 => 121,  213 => 120,  209 => 119,  205 => 118,  201 => 117,  197 => 116,  193 => 115,  189 => 114,  185 => 113,  181 => 112,  177 => 111,  173 => 110,  156 => 95,  154 => 93,  148 => 89,  146 => 87,  127 => 70,  117 => 63,  112 => 62,  108 => 60,  106 => 59,  86 => 42,  82 => 41,  78 => 40,  74 => 39,  70 => 38,  59 => 30,  37 => 11,  25 => 1,);
     }
 }

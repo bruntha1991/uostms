@@ -20,6 +20,7 @@
                     <tr>
                         <th>Year</th>
                         <th>Module</th>
+                        <th>Lecturer</th>
                         
                         <th>Hall</th>
 
@@ -31,13 +32,19 @@
                             
                             <td>{{ entity.year }}</td>
                             <td>{{ entity.module }}</td>
+                            <td>{{ lecturer.user_id}} </td>
+                            <td><a href="{{ path('uosuostms_hall', { 'hall': entity.name }) }}">{{ entity.name }}</a></td>
                             
-                            <td>{{ entity.name }}</td>
                         </tr>
         {% endfor %}
                     </tbody>
                 </table>  
 {%endif%}
+              
+              For reservations or any changes contact <br>
+              Phone number : 045-3453019 <br>
+              
+              </br>
         <form  method ="POST" action="{{path('uosuostms_ff')}}">
                     
               <button type="submit" class="btn">OK</button>

@@ -38,7 +38,8 @@ class __TwigTemplate_17a2564b4123825c4b39c6f691de05c792c9685147eece60660896e8819
               <font color=\"red\">
               ";
             // line 8
-            echo twig_escape_filter($this->env, $this->getContext($context, "error"), "html", null, true);
+            if (isset($context["error"])) { $_error_ = $context["error"]; } else { $_error_ = null; }
+            echo twig_escape_filter($this->env, $_error_, "html", null, true);
             echo "
               </font>
               </br>
@@ -60,32 +61,34 @@ class __TwigTemplate_17a2564b4123825c4b39c6f691de05c792c9685147eece60660896e8819
         
         <label for=\"year\">Year&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ";
             // line 19
-            echo twig_escape_filter($this->env, $this->getContext($context, "year"), "html", null, true);
+            if (isset($context["year"])) { $_year_ = $context["year"]; } else { $_year_ = null; }
+            echo twig_escape_filter($this->env, $_year_, "html", null, true);
             echo "</label>        
         
-         <label for=\"timeslot\">TimeSlot&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;  ";
-            // line 21
-            echo twig_escape_filter($this->env, $this->getContext($context, "timeslot"), "html", null, true);
-            echo "</label>      
+             
         
         <label for=\"timeslot\">Date&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ";
             // line 23
-            echo twig_escape_filter($this->env, $this->getContext($context, "date"), "html", null, true);
+            if (isset($context["date"])) { $_date_ = $context["date"]; } else { $_date_ = null; }
+            echo twig_escape_filter($this->env, $_date_, "html", null, true);
             echo "</label>
         
         <label for=\"hall\">Hall&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
             // line 25
-            echo twig_escape_filter($this->env, $this->getContext($context, "hall"), "html", null, true);
+            if (isset($context["hall"])) { $_hall_ = $context["hall"]; } else { $_hall_ = null; }
+            echo twig_escape_filter($this->env, $_hall_, "html", null, true);
             echo "</label>
         
         <label for=\"module\">Module&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
             // line 27
-            echo twig_escape_filter($this->env, $this->getContext($context, "module"), "html", null, true);
+            if (isset($context["module"])) { $_module_ = $context["module"]; } else { $_module_ = null; }
+            echo twig_escape_filter($this->env, $_module_, "html", null, true);
             echo "</label>
         
         <label for=\"lecturer\">Lecturer &nbsp;:   &nbsp;&nbsp; ";
             // line 29
-            echo twig_escape_filter($this->env, $this->getContext($context, "lecturer"), "html", null, true);
+            if (isset($context["lecturer"])) { $_lecturer_ = $context["lecturer"]; } else { $_lecturer_ = null; }
+            echo twig_escape_filter($this->env, $_lecturer_, "html", null, true);
             echo "</label>
         
    ";
@@ -109,7 +112,8 @@ class __TwigTemplate_17a2564b4123825c4b39c6f691de05c792c9685147eece60660896e8819
               
               ";
         // line 43
-        if (($this->getContext($context, "job") == "student")) {
+        if (isset($context["job"])) { $_job_ = $context["job"]; } else { $_job_ = null; }
+        if (($_job_ == "student")) {
             echo "    
               
               <li class=\"nav-header\">Student</li>
@@ -128,7 +132,8 @@ class __TwigTemplate_17a2564b4123825c4b39c6f691de05c792c9685147eece60660896e8819
         echo "              
               ";
         // line 51
-        if (($this->getContext($context, "job") == "lecturer")) {
+        if (isset($context["job"])) { $_job_ = $context["job"]; } else { $_job_ = null; }
+        if (($_job_ == "lecturer")) {
             echo "   
               
               <li class=\"nav-header\">Lecturer</li>
@@ -160,6 +165,6 @@ class __TwigTemplate_17a2564b4123825c4b39c6f691de05c792c9685147eece60660896e8819
 
     public function getDebugInfo()
     {
-        return array (  146 => 57,  141 => 55,  137 => 54,  131 => 51,  128 => 50,  122 => 47,  118 => 46,  112 => 43,  106 => 39,  103 => 38,  94 => 31,  88 => 29,  83 => 27,  78 => 25,  73 => 23,  68 => 21,  63 => 19,  58 => 17,  53 => 15,  49 => 13,  41 => 8,  37 => 6,  35 => 5,  32 => 4,  29 => 3,);
+        return array (  151 => 57,  146 => 55,  142 => 54,  135 => 51,  132 => 50,  126 => 47,  122 => 46,  115 => 43,  109 => 39,  106 => 38,  97 => 31,  90 => 29,  84 => 27,  78 => 25,  72 => 23,  64 => 19,  59 => 17,  54 => 15,  50 => 13,  41 => 8,  37 => 6,  35 => 5,  32 => 4,  29 => 3,);
     }
 }

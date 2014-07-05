@@ -20,7 +20,7 @@ class __TwigTemplate_080bb6010d08284818805e46915b5d12a0818b725d2f99b6c56bbfbb49e
 <html lang=\"en\">
   <head>
     <meta charset=\"utf-8\">
-    <title>University of sabaragamuwa, Timetable Management System</title>
+    <title>Sabaragamuwa university of Sri Lanka, Resources Management System</title>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <meta name=\"description\" content=\"\">
     <meta name=\"author\" content=\"\">
@@ -79,7 +79,7 @@ class __TwigTemplate_080bb6010d08284818805e46915b5d12a0818b725d2f99b6c56bbfbb49e
             <span class=\"icon-bar\"></span>
             <span class=\"icon-bar\"></span>
           </button>
-          <a class=\"brand\" href=\"#\">Timetable Management System for University of Sabaragamuwa</a>
+          <a class=\"brand\" href=\"#\">Resources Management System for Faculty of Geomatics</a>
           <div class=\"nav-collapse collapse\">
             <ul class=\"nav\">
    <!--           <li class=\"active\"><a href=\"#\">Home</a></li>
@@ -106,7 +106,7 @@ class __TwigTemplate_080bb6010d08284818805e46915b5d12a0818b725d2f99b6c56bbfbb49e
         // line 66
         echo $this->env->getExtension('routing')->getPath("uosuostms_uos");
         echo "\">
-              <input class=\"span2\" name=\"user_id\" type=\"text\" placeholder=\"User ID\">
+              <input class=\"span2\" name=\"user_id\" type=\"text\" placeholder=\"User Name\">
               <input class=\"span2\" name=\"password\" type=\"password\" placeholder=\"Password\">
               <button type=\"submit\" class=\"btn\">Sign in</button>
               
@@ -118,7 +118,8 @@ class __TwigTemplate_080bb6010d08284818805e46915b5d12a0818b725d2f99b6c56bbfbb49e
               <font color=\"red\">
               ";
             // line 74
-            echo twig_escape_filter($this->env, $this->getContext($context, "error"), "html", null, true);
+            if (isset($context["error"])) { $_error_ = $context["error"]; } else { $_error_ = null; }
+            echo twig_escape_filter($this->env, $_error_, "html", null, true);
             echo "
               </font>
               </br>
@@ -152,14 +153,16 @@ class __TwigTemplate_080bb6010d08284818805e46915b5d12a0818b725d2f99b6c56bbfbb49e
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_7051c8f_0") : $this->env->getExtension('assets')->getAssetUrl("/images/example_slide-01_1.jpg");
             // line 100
             echo "    <img src=\"";
-            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            if (isset($context["asset_url"])) { $_asset_url_ = $context["asset_url"]; } else { $_asset_url_ = null; }
+            echo twig_escape_filter($this->env, $_asset_url_, "html", null, true);
             echo "\" alt=\"Example\"/>
 ";
         } else {
             // asset "7051c8f"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_7051c8f") : $this->env->getExtension('assets')->getAssetUrl("/images/example.jpg");
             echo "    <img src=\"";
-            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            if (isset($context["asset_url"])) { $_asset_url_ = $context["asset_url"]; } else { $_asset_url_ = null; }
+            echo twig_escape_filter($this->env, $_asset_url_, "html", null, true);
             echo "\" alt=\"Example\"/>
 ";
         }
@@ -170,7 +173,7 @@ class __TwigTemplate_080bb6010d08284818805e46915b5d12a0818b725d2f99b6c56bbfbb49e
             <div class=\"carousel-caption\">
               <!--<h1></h1>
               -->
-              <p class=\"lead\">Welcome to University of Sabaragamuwa</p>
+              <p class=\"lead\">Welcome to Sabaragamuwa university of Sri Lanka</p>
              <!-- <a class=\"btn btn-large btn-primary\" href=\"#\">Sign up today</a>
             -->
              </div>
@@ -184,14 +187,16 @@ class __TwigTemplate_080bb6010d08284818805e46915b5d12a0818b725d2f99b6c56bbfbb49e
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_b222f6a_0") : $this->env->getExtension('assets')->getAssetUrl("/images/example_slide-03_1.jpg");
             // line 116
             echo "    <img src=\"";
-            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            if (isset($context["asset_url"])) { $_asset_url_ = $context["asset_url"]; } else { $_asset_url_ = null; }
+            echo twig_escape_filter($this->env, $_asset_url_, "html", null, true);
             echo "\" alt=\"Example\"/>
 ";
         } else {
             // asset "b222f6a"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_b222f6a") : $this->env->getExtension('assets')->getAssetUrl("/images/example.jpg");
             echo "    <img src=\"";
-            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            if (isset($context["asset_url"])) { $_asset_url_ = $context["asset_url"]; } else { $_asset_url_ = null; }
+            echo twig_escape_filter($this->env, $_asset_url_, "html", null, true);
             echo "\" alt=\"Example\"/>
 ";
         }
@@ -215,14 +220,16 @@ class __TwigTemplate_080bb6010d08284818805e46915b5d12a0818b725d2f99b6c56bbfbb49e
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_f7f8055_0") : $this->env->getExtension('assets')->getAssetUrl("/images/example_slide-02_1.jpg");
             // line 131
             echo "    <img src=\"";
-            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            if (isset($context["asset_url"])) { $_asset_url_ = $context["asset_url"]; } else { $_asset_url_ = null; }
+            echo twig_escape_filter($this->env, $_asset_url_, "html", null, true);
             echo "\" alt=\"Example\"/>
 ";
         } else {
             // asset "f7f8055"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_f7f8055") : $this->env->getExtension('assets')->getAssetUrl("/images/example.jpg");
             echo "    <img src=\"";
-            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            if (isset($context["asset_url"])) { $_asset_url_ = $context["asset_url"]; } else { $_asset_url_ = null; }
+            echo twig_escape_filter($this->env, $_asset_url_, "html", null, true);
             echo "\" alt=\"Example\"/>
 ";
         }
@@ -332,6 +339,6 @@ class __TwigTemplate_080bb6010d08284818805e46915b5d12a0818b725d2f99b6c56bbfbb49e
 
     public function getDebugInfo()
     {
-        return array (  315 => 179,  311 => 178,  307 => 177,  303 => 176,  299 => 175,  295 => 174,  291 => 173,  287 => 172,  283 => 171,  279 => 170,  275 => 169,  271 => 168,  267 => 167,  231 => 133,  217 => 131,  213 => 129,  200 => 118,  186 => 116,  182 => 114,  168 => 102,  154 => 100,  150 => 98,  129 => 79,  121 => 74,  117 => 72,  115 => 71,  107 => 66,  68 => 30,  64 => 29,  60 => 28,  56 => 27,  52 => 26,  41 => 18,  31 => 11,  19 => 1,);
+        return array (  322 => 179,  318 => 178,  314 => 177,  310 => 176,  306 => 175,  302 => 174,  298 => 173,  294 => 172,  290 => 171,  286 => 170,  282 => 169,  278 => 168,  274 => 167,  238 => 133,  222 => 131,  218 => 129,  205 => 118,  189 => 116,  185 => 114,  171 => 102,  155 => 100,  151 => 98,  130 => 79,  121 => 74,  117 => 72,  115 => 71,  107 => 66,  68 => 30,  64 => 29,  60 => 28,  56 => 27,  52 => 26,  41 => 18,  31 => 11,  19 => 1,);
     }
 }

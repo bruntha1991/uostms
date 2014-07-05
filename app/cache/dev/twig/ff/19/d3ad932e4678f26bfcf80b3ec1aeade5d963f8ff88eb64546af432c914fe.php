@@ -38,7 +38,8 @@ class __TwigTemplate_ff19d3ad932e4678f26bfcf80b3ec1aeade5d963f8ff88eb64546af432c
               <font color=\"red\">
               ";
             // line 8
-            echo twig_escape_filter($this->env, $this->getContext($context, "error"), "html", null, true);
+            if (isset($context["error"])) { $_error_ = $context["error"]; } else { $_error_ = null; }
+            echo twig_escape_filter($this->env, $_error_, "html", null, true);
             echo "
               </font>
               </br>
@@ -59,6 +60,7 @@ class __TwigTemplate_ff19d3ad932e4678f26bfcf80b3ec1aeade5d963f8ff88eb64546af432c
                     <tr>
                         <th>Year</th>
                         <th>Module</th>
+                        <th>Lecturer</th>
                         
                         <th>Hall</th>
 
@@ -66,39 +68,57 @@ class __TwigTemplate_ff19d3ad932e4678f26bfcf80b3ec1aeade5d963f8ff88eb64546af432c
                 </thead>
                 <tbody>
         ";
-            // line 29
+            // line 30
+            if (isset($context["entities"])) { $_entities_ = $context["entities"]; } else { $_entities_ = null; }
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable($this->getContext($context, "entities"));
+            $context['_seq'] = twig_ensure_traversable($_entities_);
             foreach ($context['_seq'] as $context["_key"] => $context["entity"]) {
-                // line 30
+                // line 31
                 echo "                        <tr>
                             
                             <td>";
-                // line 32
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "year"), "html", null, true);
+                // line 33
+                if (isset($context["entity"])) { $_entity_ = $context["entity"]; } else { $_entity_ = null; }
+                echo twig_escape_filter($this->env, $this->getAttribute($_entity_, "year"), "html", null, true);
                 echo "</td>
                             <td>";
-                // line 33
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "module"), "html", null, true);
+                // line 34
+                if (isset($context["entity"])) { $_entity_ = $context["entity"]; } else { $_entity_ = null; }
+                echo twig_escape_filter($this->env, $this->getAttribute($_entity_, "module"), "html", null, true);
                 echo "</td>
-                            
                             <td>";
                 // line 35
-                echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "name"), "html", null, true);
-                echo "</td>
+                if (isset($context["lecturer"])) { $_lecturer_ = $context["lecturer"]; } else { $_lecturer_ = null; }
+                echo twig_escape_filter($this->env, $this->getAttribute($_lecturer_, "user_id"), "html", null, true);
+                echo " </td>
+                            <td><a href=\"";
+                // line 36
+                if (isset($context["entity"])) { $_entity_ = $context["entity"]; } else { $_entity_ = null; }
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uosuostms_hall", array("hall" => $this->getAttribute($_entity_, "name"))), "html", null, true);
+                echo "\">";
+                if (isset($context["entity"])) { $_entity_ = $context["entity"]; } else { $_entity_ = null; }
+                echo twig_escape_filter($this->env, $this->getAttribute($_entity_, "name"), "html", null, true);
+                echo "</a></td>
+                            
                         </tr>
         ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 38
+            // line 40
             echo "                    </tbody>
                 </table>  
 ";
         }
-        // line 41
-        echo "        <form  method =\"POST\" action=\"";
+        // line 43
+        echo "              
+              For reservations or any changes contact <br>
+              Phone number : 045-3453019 <br>
+              
+              </br>
+        <form  method =\"POST\" action=\"";
+        // line 48
         echo $this->env->getExtension('routing')->getPath("uosuostms_ff");
         echo "\">
                     
@@ -108,50 +128,52 @@ class __TwigTemplate_ff19d3ad932e4678f26bfcf80b3ec1aeade5d963f8ff88eb64546af432c
         ";
     }
 
-    // line 48
+    // line 55
     public function block_sideMenu($context, array $blocks = array())
     {
-        // line 49
+        // line 56
         echo "
               <ul class=\"nav nav-list\">
               <li  class=\"nav-header\" ><b>Home</b></li>
               
               ";
-        // line 53
-        if (($this->getContext($context, "job") == "student")) {
+        // line 60
+        if (isset($context["job"])) { $_job_ = $context["job"]; } else { $_job_ = null; }
+        if (($_job_ == "student")) {
             echo "    
               
               <li class=\"nav-header\">Student</li>
               <li ><a  href=\"";
-            // line 56
+            // line 63
             echo $this->env->getExtension('routing')->getPath("uosuostms_fs");
             echo "\">Search Timetable </a></li>
               <li  ><a href=\"";
-            // line 57
+            // line 64
             echo $this->env->getExtension('routing')->getPath("uosuostms_falll");
             echo "\">Find Free Halls</a></li>
               
               ";
         }
-        // line 60
+        // line 67
         echo "              
               ";
-        // line 61
-        if (($this->getContext($context, "job") == "lecturer")) {
+        // line 68
+        if (isset($context["job"])) { $_job_ = $context["job"]; } else { $_job_ = null; }
+        if (($_job_ == "lecturer")) {
             echo "   
               
               <li class=\"nav-header\">Lecturer</li>
               <li ><a  href=\"";
-            // line 64
+            // line 71
             echo $this->env->getExtension('routing')->getPath("uosuostms_fttl");
             echo "\">Search Timetable </a></li>
               <li class=\"active\" ><a href=\"";
-            // line 65
+            // line 72
             echo $this->env->getExtension('routing')->getPath("uosuostms_ff");
             echo "\">Find All</a></li>    
               ";
         }
-        // line 67
+        // line 74
         echo "              </ul>   
               
 ";
@@ -169,6 +191,6 @@ class __TwigTemplate_ff19d3ad932e4678f26bfcf80b3ec1aeade5d963f8ff88eb64546af432c
 
     public function getDebugInfo()
     {
-        return array (  155 => 67,  150 => 65,  146 => 64,  140 => 61,  137 => 60,  131 => 57,  127 => 56,  121 => 53,  115 => 49,  112 => 48,  101 => 41,  96 => 38,  87 => 35,  82 => 33,  78 => 32,  74 => 30,  70 => 29,  54 => 15,  52 => 14,  49 => 13,  41 => 8,  37 => 6,  35 => 5,  32 => 4,  29 => 3,);
+        return array (  177 => 74,  172 => 72,  168 => 71,  161 => 68,  158 => 67,  152 => 64,  148 => 63,  141 => 60,  135 => 56,  132 => 55,  122 => 48,  115 => 43,  110 => 40,  96 => 36,  91 => 35,  86 => 34,  81 => 33,  77 => 31,  72 => 30,  55 => 15,  53 => 14,  50 => 13,  41 => 8,  37 => 6,  35 => 5,  32 => 4,  29 => 3,);
     }
 }

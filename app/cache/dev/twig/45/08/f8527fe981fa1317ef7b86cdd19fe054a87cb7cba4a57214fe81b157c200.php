@@ -55,57 +55,60 @@ class __TwigTemplate_4508f8527fe981fa1317ef7b86cdd19fe054a87cb7cba4a57214fe81b15
         <label for=\"timeslot\">Select Date</label>
         <input type=\"date\" name=\"date\">
         <br>
-              
+          
+        
               <button type=\"submit\" class=\"btn\">Search</button>
             </form>    
         
         ";
     }
 
-    // line 33
+    // line 34
     public function block_sideMenu($context, array $blocks = array())
     {
-        // line 34
+        // line 35
         echo "
               <ul class=\"nav nav-list\">
               <li  class=\"nav-header\" ><b>Home</b></li>
               
               ";
-        // line 38
-        if (($this->getContext($context, "job") == "student")) {
+        // line 39
+        if (isset($context["job"])) { $_job_ = $context["job"]; } else { $_job_ = null; }
+        if (($_job_ == "student")) {
             echo "    
               
               <li class=\"nav-header\">Student</li>
               <li ><a  href=\"";
-            // line 41
+            // line 42
             echo $this->env->getExtension('routing')->getPath("uosuostms_fs");
             echo "\">Search Timetable </a></li>
               <li ><a href=\"";
-            // line 42
+            // line 43
             echo $this->env->getExtension('routing')->getPath("uosuostms_falll");
             echo "\">Find Free Halls</a></li>
               
               ";
         }
-        // line 45
+        // line 46
         echo "              
               ";
-        // line 46
-        if (($this->getContext($context, "job") == "lecturer")) {
+        // line 47
+        if (isset($context["job"])) { $_job_ = $context["job"]; } else { $_job_ = null; }
+        if (($_job_ == "lecturer")) {
             echo "   
               
               <li class=\"nav-header\">Lecturer</li>
               <li class=\"active\"><a  href=\"";
-            // line 49
+            // line 50
             echo $this->env->getExtension('routing')->getPath("uosuostms_fttl");
             echo "\">Search Timetable </a></li>
               <li ><a href=\"";
-            // line 50
+            // line 51
             echo $this->env->getExtension('routing')->getPath("uosuostms_ff");
             echo "\">Find All</a></li>    
               ";
         }
-        // line 52
+        // line 53
         echo "              </ul>   
               
 ";
@@ -123,6 +126,6 @@ class __TwigTemplate_4508f8527fe981fa1317ef7b86cdd19fe054a87cb7cba4a57214fe81b15
 
     public function getDebugInfo()
     {
-        return array (  109 => 52,  104 => 50,  100 => 49,  94 => 46,  91 => 45,  85 => 42,  81 => 41,  75 => 38,  69 => 34,  66 => 33,  35 => 5,  32 => 4,  29 => 3,);
+        return array (  112 => 53,  107 => 51,  103 => 50,  96 => 47,  93 => 46,  87 => 43,  83 => 42,  76 => 39,  70 => 35,  67 => 34,  35 => 5,  32 => 4,  29 => 3,);
     }
 }
