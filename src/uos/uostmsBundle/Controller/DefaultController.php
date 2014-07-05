@@ -30,8 +30,9 @@ class DefaultController extends Controller
                 
                 $session = new Session();
                 $session->start();
-                $session->set('name', $user->getUserID());
-                $session->set('job', $user->getJob());                
+                $session->set('name', $user->getName());
+                $session->set('job', $user->getJob());  
+                
                 $session->getFlashBag()->add('users', 'Loged In');
                 
                 
@@ -126,7 +127,7 @@ class DefaultController extends Controller
  //       $timetable = new Timetable();
         $newDate= new \DateTime($date);
         
-        $stmt = $em->getConnection()->prepare('select year,module,hall.name as name from timetablel inner join hall on timetablel.hall=hall.id where date= :date and timeslot = :timeslot');
+        $stmt = $em->getConnection()->prepare('select year,module,hall.name as name, timetablel.name as lec from timetablel inner join hall on timetablel.hall=hall.id where date= :date and timeslot = :timeslot');
                 
              
                 $stmt->bindValue(':date', $date);
@@ -134,6 +135,13 @@ class DefaultController extends Controller
                 $stmt->execute();
                 $users = $stmt->fetchAll();
                 
+  /*              $id=$users.lec;
+                $stmtl = $em->getConnection()->prepare('select user_id from users where id= :id');
+                $stmtl->bindValue(':id', $id);
+                           
+                $stmt->execute();
+                $lec = $stmt->fetchAll();
+  */              
       if($users){
                   
           return $this->render('uosuostmsBundle:Default:findfreer.html.twig', array('entities'=>$users,'name' => $session->get('name'),
@@ -171,9 +179,13 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
  //       $timetable = new Timetable();
         $newDate= new \DateTime($date);
-        
+       
+                
+        $lecturer =$em->getRepository('uosuostmsBundle:Lecturers')->findOneBy(
+    array('name' => $session->get('name')));
+                
         $timetablel = $em->getRepository('uosuostmsBundle:Timetablel')->findOneBy(
-    array('timeslot' => $timeslot,'date'=>$newDate)           
+    array('timeslot' => $timeslot,'date'=>$newDate,'name'=>$lecturer->getID())           
                 
 );
             
@@ -189,7 +201,7 @@ class DefaultController extends Controller
       }
       else
       {
-          return $this->render('uosuostmsBundle:Default:findttlr.html.twig', array('error' =>'Not Available','name' => $session->get('name'),
+          return $this->render('uosuostmsBundle:Default:findttlr.html.twig', array('error' =>'No Lectures','name' => $session->get('name'),
             'job'=>$session->get('job'),));
       }
                 
@@ -248,57 +260,57 @@ class DefaultController extends Controller
         $hall=$request->get('hall');
         $session  = $this->get("session");
         
-        if($hall==='jg')
+        if($hall==='FGL 3')
         {
             return $this->render('uosuostmsBundle:Default:fg3.html.twig',array('name' => $session->get('name'),
             'job'=>$session->get('job')));
         }
-        else if($hall ==='ff')
+        else if($hall ==='FGL 1')
         {
             return $this->render('uosuostmsBundle:Default:fg1.html.twig',array('name' => $session->get('name'),
             'job'=>$session->get('job')));
         }
-        else if($hall ==='ff')
+        else if($hall ==='FGL 2')
         {
             return $this->render('uosuostmsBundle:Default:fg2.html.twig',array('name' => $session->get('name'),
             'job'=>$session->get('job')));
         }
-        else if($hall ==='ff')
+        else if($hall ==='FGL 4')
         {
             return $this->render('uosuostmsBundle:Default:fg4.html.twig',array('name' => $session->get('name'),
             'job'=>$session->get('job')));
         }
-        else if($hall ==='ff')
+        else if($hall ==='Computer lab')
         {
             return $this->render('uosuostmsBundle:Default:cl.html.twig',array('name' => $session->get('name'),
             'job'=>$session->get('job')));
         }
-        else if($hall ==='ff')
+        else if($hall ==='GIS lab')
         {
             return $this->render('uosuostmsBundle:Default:gisl.html.twig',array('name' => $session->get('name'),
             'job'=>$session->get('job')));
         }
-        else if($hall ==='ff')
+        else if($hall ==='Geodetic Lab')
         {
             return $this->render('uosuostmsBundle:Default:gl.html.twig',array('name' => $session->get('name'),
             'job'=>$session->get('job')));
         }
-        else if($hall ==='ff')
+        else if($hall ==='Photogrammetry Lab')
         {
             return $this->render('uosuostmsBundle:Default:photol.html.twig',array('name' => $session->get('name'),
             'job'=>$session->get('job')));
         }
-        else if($hall ==='ff')
+        else if($hall ==='Physics Lab')
         {
             return $this->render('uosuostmsBundle:Default:pl.html.twig',array('name' => $session->get('name'),
             'job'=>$session->get('job')));
         }
-        else if($hall ==='ff')
+        else if($hall ==='Reading hall')
         {
             return $this->render('uosuostmsBundle:Default:rh.html.twig',array('name' => $session->get('name'),
             'job'=>$session->get('job')));
         }
-        else if($hall ==='ff')
+        else if($hall ==='Remote sensing Lab')
         {
             return $this->render('uosuostmsBundle:Default:rsl.html.twig',array('name' => $session->get('name'),
             'job'=>$session->get('job')));
