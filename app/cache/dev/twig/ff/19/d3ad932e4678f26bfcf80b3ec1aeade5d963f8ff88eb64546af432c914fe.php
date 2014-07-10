@@ -88,8 +88,8 @@ class __TwigTemplate_ff19d3ad932e4678f26bfcf80b3ec1aeade5d963f8ff88eb64546af432c
                 echo "</td>
                             <td>";
                 // line 35
-                if (isset($context["lecturer"])) { $_lecturer_ = $context["lecturer"]; } else { $_lecturer_ = null; }
-                echo twig_escape_filter($this->env, $this->getAttribute($_lecturer_, "user_id"), "html", null, true);
+                if (isset($context["entity"])) { $_entity_ = $context["entity"]; } else { $_entity_ = null; }
+                echo twig_escape_filter($this->env, $this->getAttribute($_entity_, "lec"), "html", null, true);
                 echo " </td>
                             <td><a href=\"";
                 // line 36

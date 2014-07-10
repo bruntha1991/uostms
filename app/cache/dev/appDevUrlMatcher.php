@@ -418,16 +418,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'assetic.controller:render',  'name' => 'fa81e8b',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_fa81e8b_0',);
             }
 
-            // _assetic_f7f8055
-            if ($pathinfo === '/images/example.jpg') {
-                return array (  '_controller' => 'assetic.controller:render',  'name' => 'f7f8055',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_f7f8055',);
-            }
-
-            // _assetic_f7f8055_0
-            if ($pathinfo === '/images/example_slide-02_1.jpg') {
-                return array (  '_controller' => 'assetic.controller:render',  'name' => 'f7f8055',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_f7f8055_0',);
-            }
-
             // _assetic_64ea5fe
             if ($pathinfo === '/images/example.jpg') {
                 return array (  '_controller' => 'assetic.controller:render',  'name' => '64ea5fe',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_64ea5fe',);
@@ -486,6 +476,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // _assetic_4d950f8_0
             if ($pathinfo === '/images/example_DSC00063_1.jpg') {
                 return array (  '_controller' => 'assetic.controller:render',  'name' => '4d950f8',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_4d950f8_0',);
+            }
+
+            // _assetic_f7f8055
+            if ($pathinfo === '/images/example.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'f7f8055',  'pos' => NULL,  '_format' => 'jpg',  '_route' => '_assetic_f7f8055',);
+            }
+
+            // _assetic_f7f8055_0
+            if ($pathinfo === '/images/example_slide-02_1.jpg') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'f7f8055',  'pos' => 0,  '_format' => 'jpg',  '_route' => '_assetic_f7f8055_0',);
             }
 
             // _assetic_7051c8f

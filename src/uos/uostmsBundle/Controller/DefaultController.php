@@ -127,7 +127,7 @@ class DefaultController extends Controller
  //       $timetable = new Timetable();
         $newDate= new \DateTime($date);
         
-        $stmt = $em->getConnection()->prepare('select year,module,hall.name as name, timetablel.name as lec from timetablel inner join hall on timetablel.hall=hall.id where date= :date and timeslot = :timeslot');
+        $stmt = $em->getConnection()->prepare('select year, module, T.name as name, lecturers.name as lec from lecturers inner join ((select year,module,hall.name as name,timetablel.name as lecturer from timetablel inner join hall on timetablel.hall=hall.id where date=:date  and timeslot =:timeslot)  as T ) on T.lecturer=lecturers.id');
                 
              
                 $stmt->bindValue(':date', $date);
